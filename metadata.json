@@ -1,13 +1,34 @@
 {
   "name": "dbench",
-  "description": "Compiles and Installs dbench from source",
-  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "description": "Compiles and installs dbench version 4, from source",
+  "long_description": "DESCRIPTION:\n===========\n\n  I've found that dbench version 3 on RHEL 5 returns innacurate results.\nThis cookbook clones dbench version 4 from Samba.org, compiles from source\nand installs dbench in /usr/local.\n\nREQUIREMENTS:\n=============\n\nRequired Cookbooks\n------------------\n  * git\n  * build-essential\n\nATTRIBUTES:\n===========\n\n  * dbench[:src_path] - defaults to /usr/src\n  * dbench[:git_url] - git tree according to http://dbench.samba.org/web/download.html\n\nUSAGE:\n======\n\n  Add recipe[dbench] to run_list\n\nLICENSE AND AUTHOR:\n===================\n\nCopyright 2011, Eric G. Wolfe\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\n",
   "maintainer": "Eric G. Wolfe",
   "maintainer_email": "wolfe21@marshall.edu",
   "license": "Apache 2.0",
   "platforms": {
+    "redhat": [
+
+    ],
+    "centos": [
+
+    ],
+    "scientific": [
+
+    ],
+    "ubuntu": [
+
+    ],
+    "debian": [
+
+    ]
   },
   "dependencies": {
+    "git": [
+
+    ],
+    "build-essential": [
+
+    ]
   },
   "recommendations": {
   },
@@ -25,5 +46,5 @@
   },
   "recipes": {
   },
-  "version": "0.0.1"
+  "version": "0.0.4"
 }
