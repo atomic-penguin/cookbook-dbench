@@ -1,3 +1,10 @@
+## Version 1.0.1
+
+Satiate foodcritic
+
+* Add cookbook name to metadata to satiate dependency
+  rules in foodcritic.
+
 ## Version 1.0.0
 
 Factor out source install
