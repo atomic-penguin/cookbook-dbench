@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: dbench
-# Recipe:: default
+# Attributes:: source
 #
 # Copyright 2011, Eric G. Wolfe
 #
@@ -17,15 +17,5 @@
 # limitations under the License.
 #
 
-case node['dbench']['install_method']
-when "source"
-  include_recipe "dbench::source"
-when "package"
-  node['dbench']['packages'].each do |dbench_pkg|
-    package dbench_pkg
-  end
-else
-  node['dbench']['packages'].each do |dbench_pkg|
-    package dbench_pkg
-  end
-end
+default['dbench']['src_path'] = "/usr/src"
+default['dbench']['git_url'] = "git://git.samba.org/sahlberg/dbench.git"

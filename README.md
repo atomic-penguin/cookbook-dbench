@@ -1,31 +1,30 @@
-DESCRIPTION:
-===========
+# dbench [![Build Status](https://secure.travis-ci.org/atomic-penguin/cookbook-dbench.png?branch=master)](http://travis-ci.org/atomic-penguin/cookbook-dbench)
+
+## Description
 
   I've found that dbench version 3 on RHEL 5 returns innacurate results.
 This cookbook clones dbench version 4 from Samba.org, compiles from source
 and installs dbench in /usr/local.
 
-REQUIREMENTS:
-=============
+## Requirements
 
-Required Cookbooks
-------------------
+### Required Cookbooks
+
   * git
   * build-essential
 
-ATTRIBUTES:
-===========
+## Attributes
 
-  * dbench[:src_path] - defaults to /usr/src
-  * dbench[:git_url] - git tree according to http://dbench.samba.org/web/download.html
+  * `dbench['src_path']` - defaults to /usr/src
+  * `dbench['git_url']` - git tree according to http://dbench.samba.org/web/download.html
+  * `dbench['install_method']` - `source` or `package`
+  * `dbench['packages']` - dbench binary package, or source build dependency packages.
 
-USAGE:
-======
+## Usage
 
-  Add recipe[dbench] to run_list
+  Add `recipe[dbench]` to `run_list`
 
-LICENSE AND AUTHOR:
-===================
+## License and Author
 
 Copyright 2011, Eric G. Wolfe
 

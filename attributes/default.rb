@@ -17,11 +17,23 @@
 # limitations under the License.
 #
 
-default['dbench']['src_path'] = "/usr/src"
-default['dbench']['git_url'] = "git://git.samba.org/sahlberg/dbench.git"
+default['dbench']['install_method'] = "package"
+default['dbench']['packages'] = %w{ dbench }
+
 case node['platform']
-when "redhat","centos","scientific","amazon"
-  default['dbench']['pre_reqs'] = [ "libsmbclient-devel" ]
+when "redhat","centos","scientific","amazon","oracle"
+  case node['platform_version'].to_i
+  when 4,5
+    default['dbench']['install_method'] = "source"
+    default['dbench']['packages'] = %w{ libsmbclient-devel }
+  else
+    defualt['dbench']['install_method'] = "package"
+    default['dbench']['packages'] = %w{ dbench libsmbclient-devel }
+  end
 when "debian","ubuntu"
-    default['dbench']['pre_reqs'] = [ "libsmbclient-dev" ]
+  default['dbench']['install_method'] = "package"
+  default['dbench']['packages'] = %w{ dbench libsmbclient-dev }
+else
+  default['dbench']['install_method'] = "package"
+  default['dbench']['packages'] = %{ dbench } 
 end
