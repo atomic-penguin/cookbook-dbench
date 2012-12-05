@@ -1,3 +1,7 @@
+## Version 1.0.2
+
+Correct samba3x vs. libsmbclient-devel conflict on RHEL5
+
 ## Version 1.0.1
 
 Satiate foodcritic

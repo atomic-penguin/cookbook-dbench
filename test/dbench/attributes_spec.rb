@@ -57,7 +57,7 @@ describe 'Dbench::Attributes::Default' do
     end
 
     it "installs the libsmbclient build dependency" do
-      @node[attr_ns]['packages'].must_include "libsmbclient-devel"
+      @node[attr_ns]['packages'].must_include "samba3x"
     end
   end
 

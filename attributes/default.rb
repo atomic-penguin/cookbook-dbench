@@ -23,9 +23,12 @@ default['dbench']['packages'] = %w{ dbench }
 case node['platform']
 when "redhat","centos","scientific","amazon","oracle"
   case node['platform_version'].to_i
-  when 4,5
+  when 4
     default['dbench']['install_method'] = "source"
-    default['dbench']['packages'] = %w{ libsmbclient-devel }
+    default['dbench']['packages'] = %w{ libsmbclient-devel } 
+  when 5
+    default['dbench']['install_method'] = "source"
+    default['dbench']['packages'] = %w{ samba3x }
   else
     defualt['dbench']['install_method'] = "package"
     default['dbench']['packages'] = %w{ dbench libsmbclient-devel }
