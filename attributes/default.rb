@@ -30,7 +30,7 @@ when "redhat","centos","scientific","amazon","oracle"
     default['dbench']['install_method'] = "source"
     default['dbench']['packages'] = %w{ samba3x }
   else
-    defualt['dbench']['install_method'] = "package"
+    default['dbench']['install_method'] = "package"
     default['dbench']['packages'] = %w{ dbench libsmbclient-devel }
   end
 when "debian","ubuntu"

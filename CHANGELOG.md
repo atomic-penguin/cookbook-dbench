@@ -1,3 +1,7 @@
+## Version 1.0.3
+
+minor typo 's/defualt/default'
+
 ## Version 1.0.2
 
 Correct samba3x vs. libsmbclient-devel conflict on RHEL5
