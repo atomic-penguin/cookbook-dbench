@@ -48,7 +48,7 @@ describe 'Dbench::Attributes::Default' do
 
   describe "for centos 5 platform" do
     let(:ohai_data) do
-      { :platform => "centos", :platform_version => "5.7" }
+      { :platform_family => "rhel", :platform => "centos", :platform_version => "5.7" }
     end
 
     it "installs dbench from source" do
@@ -62,7 +62,7 @@ describe 'Dbench::Attributes::Default' do
 
   describe "for ubuntu 10 platform" do
     let(:ohai_data) do
-      { :platform => "ubuntu", :platform_version => "10.04" }
+      { :platform_family => "debian", :platform => "ubuntu", :platform_version => "10.04" }
     end
 
     it "installs dbench from package" do

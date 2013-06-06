@@ -1,3 +1,7 @@
+## Version 1.0.5
+
+* Correct attribute spec tests
+
 ## Version 1.0.4
 
 * Add dependency for yum::epel
