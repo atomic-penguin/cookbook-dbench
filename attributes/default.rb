@@ -20,8 +20,8 @@
 default['dbench']['install_method'] = "package"
 default['dbench']['packages'] = %w{ dbench }
 
-case node['platform']
-when "redhat","centos","scientific","amazon","oracle"
+case node['platform_family']
+when "rhel"
   case node['platform_version'].to_i
   when 4
     default['dbench']['install_method'] = "source"
@@ -33,7 +33,7 @@ when "redhat","centos","scientific","amazon","oracle"
     default['dbench']['install_method'] = "package"
     default['dbench']['packages'] = %w{ dbench libsmbclient-devel }
   end
-when "debian","ubuntu"
+when "debian"
   default['dbench']['install_method'] = "package"
   default['dbench']['packages'] = %w{ dbench libsmbclient-dev }
 else
