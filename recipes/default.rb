@@ -21,6 +21,10 @@ case node['dbench']['install_method']
 when "source"
   include_recipe "dbench::source"
 when "package"
+  case node['platform_family']
+  when 'rhel'
+    include_recipe "yum::epel"
+  end
   node['dbench']['packages'].each do |dbench_pkg|
     package dbench_pkg
   end

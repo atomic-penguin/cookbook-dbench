@@ -1,10 +1,16 @@
+## Version 1.0.4
+
+* Add dependency for yum::epel
+* Add test-kitchen skeleton
+* Fix minitest-spec for Chef 11.x
+
 ## Version 1.0.3
 
-minor typo 's/defualt/default'
+* minor typo 's/defualt/default'
 
 ## Version 1.0.2
 
-Correct samba3x vs. libsmbclient-devel conflict on RHEL5
+* Correct samba3x vs. libsmbclient-devel conflict on RHEL5
 
 ## Version 1.0.1
 
